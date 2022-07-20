@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="Page-Exit" content="revealTrans(Duration=2.0,Transition=12)">
+   <link rel="stylesheet" href="./assets/css/style.css">
+   <title>IkingariSolorzano</title>
+</head>
+<body>
+   <main>
+      <section class="welcome" >
+         <h1 class="welcome-text">Welcome to ikingari<span id="solorzano">solorzano</span>.com!</h1>
+         <div  class="links" id="links" hidden >
+            Enter
+         </div>
+      </section>
+   </main>
+
+   <script>
+      let home = document.getElementById("links");
+
+      let cuerpo= document.getElementsByTagName("body")[0];
+      window.addEventListener("DOMContentLoaded", ()=>{
+
+         setTimeout(() => {
+            home.style.display='block'
+         }, 2200);
+      });
+      home.addEventListener("click", ()=>{
+         setTimeout(() => {
+            window.location.href="profile.html";
+            
+         }, 500);
+         cuerpo.style.animation="hidebody 0.7s ";
+      })
+
+   </script>
+</body>
+</html>

@@ -1,0 +1,144 @@
+* {
+   font-family: 'Courier New', Courier, monospace;
+   font-weight: normal;
+}
+
+body {
+   background-color: black;
+   display: grid;
+   grid-template-columns: 1fr;
+   grid-template-rows: minmax(150px, 700px);
+   place-items: center;
+
+
+}
+
+@keyframes hidebody {
+   from {
+      opacity: 100%;
+   }
+
+   to {
+      opacity: 0%;
+      background-color: white;
+   }
+}
+
+
+main {
+   color: white;
+   text-align: center;
+}
+
+.welcome-text {
+   display: block;
+   font-size: 2.7em;
+   margin-bottom: 20px;
+   ;
+   white-space: nowrap;
+   border-right: 4px solid;
+   width: 31ch;
+   animation: typing 2s steps(24),
+      blink .5s infinite step-end alternate;
+   overflow: hidden;
+}
+
+@keyframes typing {
+   from {
+      width: 0
+   }
+}
+
+@keyframes blink {
+   50% {
+      border-color: transparent;
+   }
+
+   ;
+}
+
+#solorzano {
+   font-family: roboto, sans-serif;
+   font-weight: normal;
+}
+
+.links {
+   position: relative;
+   animation: showing 4s;
+}
+
+.links {
+
+   background-color: teal;
+   width: 30%;
+   margin: 0 auto;
+   color: black;
+   font-family: 'Arial Narrow';
+   font-size: 2em;
+   padding: 8px;
+   cursor: pointer;
+   border-radius: 12px;
+   border: solid 1px white;
+}
+
+
+.links:before {
+   content: "";
+   z-index: -1;
+   position: absolute;
+   top: 0;
+   right: 0;
+   bottom: 0;
+   left: 0;
+   background: linear-gradient(-45deg, #aefb2a 0%, #57ebde 100%);
+   transform: translate3d(1px, 0px, 0) scale(1);
+   filter: blur(30px);
+   opacity: var(0.7);
+   transition: opacity 0.3s;
+   border-radius: inherit;
+}
+
+/* 
+* Prevents issues when the parent creates a 
+* stacking context. (For example, using the transform
+* property )
+*/
+.links::after {
+   content: "";
+   z-index: -1;
+   position: absolute;
+   top: 0;
+   right: 0;
+   bottom: 0;
+   left: 0;
+   background: inherit;
+   border-radius: inherit;
+}
+
+
+.links:active {
+   background-color: lightgreen;
+   padding: 3px;
+   color: white
+}
+
+@keyframes showing {
+   from {
+      opacity: 0;
+   }
+}
+
+@media screen and (max-width: 900px) {
+   .welcome-text {
+      font-size: 2em;
+      white-space: initial;
+      width: 20ch;
+      border-right: 2px solid;
+   }
+
+   .links {
+      font-weight: 100;
+      font-size: 2em;
+   }
+
+}

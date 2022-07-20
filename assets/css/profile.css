@@ -1,0 +1,193 @@
+/*
+Ajustes generales para el documento general.html
+*/
+* {
+   margin: 0;
+   padding: 0;
+   color: #333;
+}
+
+body {
+   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+   font-size: 1em;
+}
+
+/*
+ Nav class = encabezado 
+A partir de esta línea se configura la barra de navegación
+*/
+
+.encabezado {
+   position: fixed;
+   top: 0;
+   z-index: 1;
+   width: 100%;
+   background-color: black;
+   padding: 15px;
+}
+
+.encabezado:before {
+   content: "";
+   z-index: -1;
+   position: absolute;
+   top: 0;
+   right: 0;
+   bottom: 0;
+   left: 0;
+   background: linear-gradient(-45deg, #000000 0%, #04619f 100%);
+   transform: translate3d(0px, 5px, 0) scale(0.95);
+   filter: blur(10px);
+   opacity: var(0.7);
+   transition: opacity 0.3s;
+   border-radius: inherit;
+}
+
+.encabezado::after {
+   content: "";
+   z-index: -1;
+   position: absolute;
+   top: 0;
+   right: 0;
+   bottom: 0;
+   left: 0;
+   background: inherit;
+   border-radius: inherit;
+}
+
+/* Esta parte es para los textos de la NavBar */
+.huno {
+   color: white;
+   font-size: 0.9em;
+}
+
+/* Estilos para la primera parte de la Página */
+.seccion1 {
+   height: 85vh;
+   background-image: radial-gradient(circle at 25.82% -16.45%,
+         #5d70c4 0,
+         #061430 50%,
+         #000000 100%);
+
+   padding: 10% 3%;
+   display: grid;
+   grid-template-columns: 2fr 1.5fr;
+   gap: 25px;
+}
+
+.saludo {
+   display: grid;
+   grid-template-rows: 200px 100px;
+   /* place-items: center; */
+}
+
+#hola {
+   place-self: center;
+   font-size: 3em;
+}
+
+.botones {
+   display: grid;
+   grid-template-columns: 1fr 2fr 2fr 2fr 1fr;
+   place-items: center;
+   gap: 15px;
+
+}
+
+.boton-inicio {
+   font-size: 1em;
+   color: white;
+   height: 50%;
+   width: 70%;
+   background: #8e2de2;
+   /* fallback for old browsers */
+   background: -webkit-linear-gradient(to bottom, #8e2de2, #4a00e0);
+   /* Chrome 10-25, Safari 5.1-6 */
+   background: linear-gradient(to bottom, #9a5fce, #3e168d);
+   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+   border-radius: 10px;
+   border: none;
+   box-shadow: 0px 2px 15px white;
+}
+
+.boton-inicio:hover {
+   transform: scale(.9);
+   box-shadow: 0px 2px 20px white;
+}
+
+.infoSeccion1 {
+   padding-right: 50px;
+}
+
+h2 {
+   color: #fff;
+}
+
+p {
+   color: white;
+   margin: 40px 0;
+}
+
+/* A partir de aqué va la segunda sección de la Página */
+
+.tecs {
+   padding: 12%;
+   padding-bottom: 0;
+   height: 85vh;
+   display: grid;
+   grid-template-columns: 2fr 2fr;
+   place-content: center;
+}
+
+img {
+   margin-top: 15px;
+   width: 100%;
+}
+
+/* En esta sección están configurados los estilos para los botones de las tecnologías */
+.tecnologias {
+   padding: 3%;
+   font-size: 3em;
+}
+
+.tecnologiasItem {
+   font-size: 0.8em;
+   margin: 35px;
+   background-color: white;
+   border-radius: 15px;
+   padding: 18px 20px;
+   cursor: pointer;
+   text-align: center;
+   position: relative;
+}
+
+.tecnologiasItem:hover {
+   transform: scale(1.1);
+}
+
+.tecnologiasItem:before {
+   content: "";
+   z-index: -1;
+   position: absolute;
+   top: 0;
+   right: 0;
+   bottom: 0;
+   left: 0;
+   background: linear-gradient(-45deg, #210cae 0%, #4dc9e6 100%);
+   transform: translate3d(0px, 8px, 0) scale(0.95);
+   filter: blur(10px);
+   opacity: var(0.7);
+   transition: opacity 0.3s;
+   border-radius: inherit;
+}
+
+.tecnologiasItem::after {
+   content: "";
+   z-index: -1;
+   position: absolute;
+   top: 0;
+   right: 0;
+   bottom: 0;
+   left: 0;
+   background: inherit;
+   border-radius: inherit;
+}
