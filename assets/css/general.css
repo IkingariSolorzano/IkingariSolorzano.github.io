@@ -101,53 +101,11 @@
    display: none;
 }
 
-@media (max-width: 952) {}
-
-@media screen and (max-width: 768px) {
-
-   .checkbtn {
-      display: block;
-   }
-
-   .nav-menu {
-      position: fixed;
-      width: 100%;
-      height: 100vh;
-      background-color: gray;
-      top: 40px;
-      left: -100%;
-      text-align: center;
-      transition: all 0.5s;
-
-   }
-
-   .nav-item {
-      display: block;
-      font-size: 2em;
-      ;
-      margin: 20px 0;
-      line-height: 30px;
-   }
-
-   #check:checked~.nav-menu {
-      left: 0;
-   }
-}
-
 .principal {
 
    display: grid;
    grid-template-columns: repeat(4, minmax(100px, 368px));
 }
-
-/* @media screen and (-width: 768px) {
-
-   .principal {
-      margin-top: 10%;
-      display: grid;
-      grid-template-columns: minmax(100px, 250px);
-   }
-} */
 
 /* Seccion 1 INICIA AQUÍ */
 .seccion1 {
@@ -161,14 +119,14 @@
    grid-template-rows: 95vh;
    grid-template-areas: "info info bbvn bbvn"
       "info info bbvn bbvn ";
-   gap: 15px;
+   gap: 25px;
    padding-bottom: 20px;
 }
 
 .seccion1-info {
    grid-area: info;
    display: grid;
-   grid-template-rows: 45vh 50vh;
+   grid-template-rows: 40vh 30vh;
 
 }
 
@@ -214,10 +172,11 @@
 
 .saludo {
    margin-right: 25px;
+   margin-top: 50px;
    grid-area: bbvn;
    display: grid;
    place-items: center;
-   grid-template-rows: 30vh 20vh 20vh;
+   grid-template-rows: 45vh 40vh 20vh;
 
 }
 
@@ -270,7 +229,6 @@
 
 .imagen {
    grid-area: foto;
-
 }
 
 .imagen img {
@@ -292,6 +250,7 @@
    cursor: pointer;
    text-align: center;
    position: relative;
+   object-fit: contain;
 }
 
 .tecnologiasItem img {
@@ -328,4 +287,124 @@
    left: 0;
    background: inherit;
    border-radius: inherit;
+}
+
+@media screen and (max-width: 976px) {
+   .nav-brand {
+      padding: 0px 10px;
+   }
+
+   .nav-brand h2 {
+      font-size: 1em;
+   }
+
+   .nav-item {
+      display: inline-block;
+      font-weight: regular;
+      line-height: 15px;
+      margin-top: 10px;
+      padding: 0px 15px;
+
+      border-right: 1px solid white;
+
+      cursor: pointer;
+   }
+
+   .seccion1-info {
+      grid-template-rows: 40vh 50vh;
+   }
+
+   .seccion1-encabezado h2 {
+      font-size: 3.5em;
+   }
+
+   .seccion1-lista {
+      font-size: 1.2em;
+   }
+
+   .seccion1-cuerpo p {
+      font-size: 1em;
+   }
+
+   .saludo {
+      margin-right: 0px;
+   }
+
+   .saludo-encabezado h2 {
+      font-size: 2em;
+
+
+   }
+
+   .botones {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 30px;
+   }
+
+   .seccion2 {
+      gap: 0;
+   }
+}
+
+@media screen and (max-width: 768px) {
+
+   .checkbtn {
+      display: block;
+   }
+
+   .nav-menu {
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      background-color: gray;
+      top: 40px;
+      left: -100%;
+      text-align: center;
+      transition: all 0.5s;
+
+   }
+
+   .nav-item {
+      display: block;
+      font-size: 2em;
+      ;
+      margin: 20px 0;
+      line-height: 30px;
+   }
+
+   #check:checked~.nav-menu {
+      left: 0;
+   }
+
+   .seccion1 {
+      display: grid;
+      grid-auto-columns: minmax(100px, 150px);
+      grid-template-areas: "info info info info"
+         "bbvn bbvn bbvn bbvn";
+      gap: 10px;
+      justify-items: center;
+      padding-bottom: 0px;
+   }
+
+   .imagen img {
+      display: none;
+   }
+
+   .seccion2 {
+      height: 100vh;
+      margin-top: 40px;
+      display: grid;
+      grid-template-areas:
+         "tech tech"
+         "tech tech";
+   }
+
+   .tecnologias {
+      gap: 3px;
+   }
+
+   .tecnologiasItem {
+      margin: 5px;
+   }
 }
