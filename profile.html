@@ -4,55 +4,157 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="./assets/css/profile.css" />
+        <link rel="stylesheet" href="./assets/css/general.css" />
         <title>Profile</title>
     </head>
     <body>
         <!-- Menú de Navegación -->
-        <nav class="encabezado">
-            <h1 class="huno">Ikingari Solorzano</h1>
+        <nav class="navbar">
+            <div class="nav-brand">
+                <h1>Ikingari Solorzano</h1>
+            </div>
+            <div class="nav-menu">
+                <ul>
+                    <li class="nav-item">Inicio</li>
+                    <li class="nav-item">Tecnologías</li>
+                    <li class="nav-item">Portfolio</li>
+                    <li class="nav-item">About me</li>
+                    <li class="nav-item">Contact</li>
+                </ul>
+            </div>
         </nav>
-
         <!-- Cuerpo del Documento -->
-        <main>
+        <main class="principal">
             <!-- Primera sección del cuerpo -->
             <section class="seccion1">
-                <div class="saludo">
-                    <h2 id="hola">¡Hello!</h2>
-                    <div class="botones">
-                        <span></span>
-                        <button class="boton-inicio">About me</button>
-                        <button class="boton-inicio">My work</button>
-                        <button class="boton-inicio">Contact</button>
-                        <span></span>
+                <div class="seccion1-info">
+                    <div class="seccion1-encabezado">
+                        <h2>!Hola!</h2>
+                    </div>
+                    <div class="seccion1-cuerpo">
+                        <ul class="seccion1-lista">
+                            <li>Tecnología</li>
+                            <li>Desarrollo Web</li>
+                            <li>Programación</li>
+                        </ul>
+                        <p>
+                            Una de las principales características de nuestros
+                            tiempos, es el uso de la tecnología para cualquier
+                            situación de la vida cotidiana
+                        </p>
+                        <p>
+                            Las empresas más valiosas del mundo en la actualidad
+                            son empresas de tecnología o empresas que dependen
+                            completamente de ella.
+                        </p>
+                        <p>Si deseas llevar tu empresa al siguiente nivel,</p>
+                        <h2>!Aquí encontraras un excelente opción!</h2>
                     </div>
                 </div>
-                <div class="infoSeccion1">
-                    <h2>¡Me alegra que estés por aquí!</h2>
-                    <br />
-                    <p>Startups, Tech, TICs, Fintech</p>
-                    <p>
-                        Estos y otros conceptos son muy comunes actualmente, y
-                        las empresas necesitan ir al día con estos avances.
-                    </p>
-                    <p>
-                        Si deseas llevar tu empresa al siguiente nivel, !Aquí
-                        encontraras un excelente opción!
-                    </p>
+                <div class="saludo">
+                    <div class="saludo-encabezado">
+                        <h2>¡Me alegra que estés aquí!</h2>
+                    </div>
+                    <div class="botones">
+                        <button class="boton-inicio">Technologías</button>
+                        <button class="boton-inicio">Mi trabajo</button>
+                        <button class="boton-inicio">Contáctame</button>
+                    </div>
                 </div>
             </section>
 
             <!-- Segunda sección de la página -->
-            <section class="tecs">
-                <picture>
+            <section class="seccion2">
+                <picture class="imagen">
                     <img src="./assets/images/AvatarDISV4.png" alt="" />
                 </picture>
                 <div class="tecnologias">
-                    <div class="tecnologiasItem">HTML</div>
-                    <div class="tecnologiasItem">CSS</div>
-                    <div class="tecnologiasItem">JAVASCRIPT</div>
-                    <div class="tecnologiasItem">PHP</div>
-                    <div class="tecnologiasItem">GO / Golang</div>
+                    <div class="tecnologiasItem">
+                        <img
+                            src="./assets/images/linux_penguin_animal_9362.png"
+                            alt=""
+                        />
+                    </div>
+                    <div class="tecnologiasItem">
+                        <img
+                            src="./assets/images/windows_icon-icons.com_62797.png"
+                            alt=""
+                        />
+                    </div>
+
+                    <div class="tecnologiasItem">
+                        <img
+                            src="./assets/images/file_type_docker_icon_130643.png"
+                            alt=""
+                        />
+                    </div>
+                    <div class="tecnologiasItem">
+                        <img
+                            src="./assets/images/html_original_wordmark_logo_icon_146478.png"
+                            alt=""
+                        />
+                    </div>
+                    <div class="tecnologiasItem">
+                        <img
+                            src="./assets/images/css_original_wordmark_logo_icon_146576.png"
+                            alt=""
+                        />
+                    </div>
+                    <div class="tecnologiasItem">
+                        <img
+                            src="./assets/images/file_type_js_official_icon_130509.png"
+                            alt=""
+                        />
+                    </div>
+                    <div class="tecnologiasItem">
+                        <img
+                            src="./assets/images/file_type_php_icon_130266.png"
+                            alt=""
+                        />
+                    </div>
+                    <div class="tecnologiasItem">
+                        <img
+                            src="./assets/images/file_type_vue_icon_130078.png"
+                            alt=""
+                        />
+                    </div>
+                    <div class="tecnologiasItem">
+                        <img
+                            src="./assets/images/nodejs_original_wordmark_logo_icon_146412.png"
+                            alt=""
+                        />
+                    </div>
+                    <div class="tecnologiasItem">
+                        <img
+                            src="./assets/images/mysql_original_wordmark_logo_icon_146417.png"
+                            alt=""
+                        />
+                    </div>
+
+                    <div class="tecnologiasItem">
+                        <img
+                            src="./assets/images/postgresql_original_wordmark_logo_icon_146392.png"
+                            alt=""
+                        />
+                    </div>
+                    <div class="tecnologiasItem">
+                        <img
+                            src="./assets/images/mongodb_original_wordmark_logo_icon_146425.png"
+                            alt=""
+                        />
+                    </div>
+                    <div class="tecnologiasItem">
+                        <img
+                            src="./assets/images/golang_logo_icon_171073.png"
+                            alt=""
+                        />
+                    </div>
+                    <div class="tecnologiasItem">
+                        <img src="./assets/images/git.png" alt="" />
+                    </div>
+                    <div class="tecnologiasItem">
+                        <img src="./assets/images/github.png" alt="" />
+                    </div>
                 </div>
             </section>
         </main>

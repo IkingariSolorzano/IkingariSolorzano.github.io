@@ -1,0 +1,270 @@
+* {
+   font-size: 14px;
+   font-family: Helvetica, Arial, sans-serif;
+   color: white;
+   list-style: none;
+   margin: 0;
+   padding: 0;
+   text-align: center;
+}
+
+.navbar {
+   width: 100%;
+   position: fixed;
+   z-index: 100;
+   height: 3em;
+   top: 0;
+   background-color: black;
+   display: flex;
+   justify-content: space-between;
+}
+
+
+.navbar:before {
+   content: "";
+   z-index: -1;
+   position: absolute;
+   top: 0;
+   right: 0;
+   bottom: 0;
+   left: 0;
+   background: linear-gradient(-45deg, #000000 0%, #0906be 100%);
+   transform: translate3d(0px, 5px, 0) scale(0.95);
+   filter: blur(8px);
+   opacity: var(0.7);
+   transition: opacity 0.3s;
+   border-radius: inherit;
+}
+
+.navbar::after {
+   content: "";
+   z-index: -1;
+   position: absolute;
+   top: 0;
+   right: 0;
+   bottom: 0;
+   left: 0;
+   background: inherit;
+   border-radius: inherit;
+}
+
+.nav-brand {
+   padding: 15px;
+   z-index: 100;
+}
+
+.nav-menu {
+   padding: 15px;
+   z-index: 100;
+}
+
+.nav-item {
+   display: inline;
+
+   z-index: 1;
+   font-weight: bold;
+   padding: 10px 15px;
+   border-right: 1px solid white;
+   cursor: pointer;
+}
+
+.nav-item:last-child {
+   border-right: none;
+}
+
+.nav-item:hover {
+   background-color: white;
+   color: black;
+}
+
+.principal {
+   margin-top: 3%;
+   display: grid;
+   grid-template-columns: repeat(4, minmax(100px, 368px));
+
+
+}
+
+
+
+/* Seccion 1 INICIA AQUÍ */
+.seccion1 {
+   background-image: radial-gradient(circle at 25.82% -16.45%,
+         #5d70c4 0,
+         #061430 50%,
+         #000000 100%);
+   grid-area: 1/1/3/5;
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+   grid-template-rows: 95vh;
+   grid-template-areas: "info info bbvn bbvn"
+      "info info bbvn bbvn ";
+   gap: 15px;
+   padding-bottom: 20px;
+}
+
+.seccion1-info {
+   grid-area: info;
+   display: grid;
+   grid-template-rows: 30vh 50vh;
+
+}
+
+.seccion1-encabezado {
+   place-self: center;
+
+}
+
+.seccion1-encabezado h2 {
+   font-size: 5em;
+   text-shadow: 2px 2px 5px black;
+}
+
+.seccion1-lista {
+   font-size: 1.5em;
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   padding: 10px;
+   text-shadow: 2px 2px 5px black;
+}
+
+.seccion1-cuerpo {
+   padding: 0px 30px;
+}
+
+.seccion1-cuerpo li {
+   font-size: 1em;
+   padding-bottom: 25px;
+   text-shadow: 2px 2px 5px black;
+}
+
+.seccion1-cuerpo p {
+   font-size: 1.2em;
+   padding-bottom: 25px;
+   text-shadow: 4px 4px 3px black;
+}
+
+.seccion1-cuerpo h2 {
+   margin-top: 10px;
+   font-size: 1.8em;
+   text-shadow: 3px 3px 3px black;
+}
+
+.saludo {
+   margin-right: 25px;
+   grid-area: bbvn;
+   display: grid;
+   place-items: center;
+   grid-template-rows: 30vh 20vh 20vh;
+
+}
+
+.saludo-encabezado {
+   padding: 30px;
+}
+
+.saludo-encabezado h2 {
+   font-size: 3em;
+}
+
+
+.botones {
+   display: grid;
+   grid-template-columns: 2fr 2fr 2fr;
+   gap: 30px;
+
+}
+
+.boton-inicio {
+   font-size: 1.2em;
+   padding: 20px;
+   color: white;
+   text-shadow: 0px 0px 5px black;
+   background: #8e2de2;
+   /* fallback for old browsers */
+   background: -webkit-linear-gradient(to bottom, #8e2de2, #4a00e0);
+   /* Chrome 10-25, Safari 5.1-6 */
+   background: linear-gradient(to bottom, #8e2de2, #4a00e0);
+   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+   border: none;
+   border-radius: 25px;
+   box-shadow: 0px 0px 10px white;
+}
+
+.boton-inicio:hover {
+   transform: scale(.9);
+   box-shadow: 0px 2px 20px white;
+}
+
+.seccion2 {
+   grid-area: 3 /1/ 6/5;
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   grid-template-rows: 95vh;
+   grid-template-areas:
+      "foto tech"
+      "foto tech";
+   place-items: center;
+}
+
+.imagen {
+   grid-area: foto;
+
+}
+
+.imagen img {
+   width: 78%;
+}
+
+.tecnologias {
+   grid-area: tech;
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   gap: 5px;
+}
+
+.tecnologiasItem {
+   margin: 15px;
+   background-color: white;
+   border-radius: 15px;
+   padding: 10px 0px;
+   cursor: pointer;
+   text-align: center;
+   position: relative;
+}
+
+.tecnologiasItem img {
+   width: 30%;
+}
+
+.tecnologiasItem:hover {
+   transform: scale(1.1);
+}
+
+.tecnologiasItem:before {
+   content: "";
+   z-index: -1;
+   position: absolute;
+   top: 0;
+   right: 0;
+   bottom: 0;
+   left: 0;
+   background: linear-gradient(-45deg, #210cae 0%, #4dc9e6 100%);
+   transform: translate3d(0px, 8px, 0) scale(0.95);
+   filter: blur(10px);
+   opacity: var(0.7);
+   transition: opacity 0.3s;
+   border-radius: inherit;
+}
+
+.tecnologiasItem::after {
+   content: "";
+   z-index: -1;
+   position: absolute;
+   top: 0;
+   right: 0;
+   bottom: 0;
+   left: 0;
+   background: inherit;
+   border-radius: inherit;
+}
