@@ -6,19 +6,22 @@
    margin: 0;
    padding: 0;
    text-align: center;
+   text-decoration: none;
+   box-sizing: border-box;
 }
 
 .navbar {
-   width: 100%;
-   position: fixed;
-   z-index: 100;
-   height: 3em;
-   top: 0;
    background-color: black;
-   display: flex;
-   justify-content: space-between;
+   width: 100%;
+   height: 50px;
+   position: fixed;
+   margin-bottom: 10px;
+   z-index: 100;
+   /* height: 3em; */
+   /* top: 0; */
+   /* display: flex; */
+   /* justify-content: space-between; */
 }
-
 
 .navbar:before {
    content: "";
@@ -49,22 +52,29 @@
 }
 
 .nav-brand {
-   padding: 15px;
-   z-index: 100;
+   position: absolute;
+   padding: 0px 30px;
+}
+
+.nav-brand h2 {
+   font-size: 1.5em;
+   line-height: 50px;
 }
 
 .nav-menu {
-   padding: 15px;
-   z-index: 100;
+   float: right;
+   margin-top: 5px;
 }
 
 .nav-item {
-   display: inline;
-
-   z-index: 1;
+   display: inline-block;
    font-weight: bold;
-   padding: 10px 15px;
+   line-height: 25px;
+   margin-top: 10px;
+   padding: 0px 25px;
+
    border-right: 1px solid white;
+
    cursor: pointer;
 }
 
@@ -74,18 +84,70 @@
 
 .nav-item:hover {
    background-color: white;
+   transition: 0.6s;
    color: black;
 }
 
-.principal {
-   margin-top: 3%;
-   display: grid;
-   grid-template-columns: repeat(4, minmax(100px, 368px));
-
-
+.checkbtn {
+   font-size: 1.2em;
+   float: right;
+   line-height: 50px;
+   margin-right: 40px;
+   cursor: pointer;
+   display: none;
 }
 
+#check {
+   display: none;
+}
 
+@media (max-width: 952) {}
+
+@media screen and (max-width: 768px) {
+
+   .checkbtn {
+      display: block;
+   }
+
+   .nav-menu {
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      background-color: gray;
+      top: 40px;
+      left: -100%;
+      text-align: center;
+      transition: all 0.5s;
+
+   }
+
+   .nav-item {
+      display: block;
+      font-size: 2em;
+      ;
+      margin: 20px 0;
+      line-height: 30px;
+   }
+
+   #check:checked~.nav-menu {
+      left: 0;
+   }
+}
+
+.principal {
+
+   display: grid;
+   grid-template-columns: repeat(4, minmax(100px, 368px));
+}
+
+/* @media screen and (-width: 768px) {
+
+   .principal {
+      margin-top: 10%;
+      display: grid;
+      grid-template-columns: minmax(100px, 250px);
+   }
+} */
 
 /* Seccion 1 INICIA AQUÍ */
 .seccion1 {
@@ -106,7 +168,7 @@
 .seccion1-info {
    grid-area: info;
    display: grid;
-   grid-template-rows: 30vh 50vh;
+   grid-template-rows: 45vh 50vh;
 
 }
 
@@ -166,7 +228,6 @@
 .saludo-encabezado h2 {
    font-size: 3em;
 }
-
 
 .botones {
    display: grid;
